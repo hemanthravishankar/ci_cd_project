@@ -19,7 +19,8 @@ jobs:
         uses: actions/checkout@v2
       - name: Build an image from Dockerfile
         run: |
-          docker build -t docker.io/hemanthravishankar/notepad:${{ github.sha }} --file ./notes-app-cicd-main/Dockerfile
+          cd notes-app-cicd-main
+          docker build -t docker.io/hemanthravishankar/notepad:${{ github.sha }} .
       - name: Run Trivy vulnerability scanner
         uses: aquasecurity/trivy-action@master
         with:
