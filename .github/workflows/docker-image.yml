@@ -48,4 +48,4 @@ jobs:
            token: ${{ secrets.PAT }}
            repository: hemanthravishankar/ci_cd_project_k8s
            event-type: new-image
-           client-payload: '{docker.io/hemanthravishankar/notepad:${{ github.sha }}}'
+           client-payload: '{"github": ${{ github.sha }}}'
