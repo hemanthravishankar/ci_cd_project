@@ -31,3 +31,4 @@ npm test
 
 test0
 test1
+test2
