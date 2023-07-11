@@ -1,4 +1,0 @@
-gitops
-newline
-
-test
