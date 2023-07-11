@@ -43,9 +43,9 @@ jobs:
         run: |
           docker push docker.io/hemanthravishankar/notepad:${{ github.sha }}
       - name: Repository Dispatch
-        uses: peter-evans/repository-dispatch@v1
+        uses: peter-evans/repository-dispatch@v2
         with:
            token: ${{ secrets.PAT }}
-           repository: https://github.com/hemanthravishankar/ci_cd_project_k8s.git
+           repository: hemanthravishankar/ci_cd_project_k8s
            event-type: new-image
            client-payload: 'docker.io/hemanthravishankar/notepad:${{ github.sha }}'
