@@ -46,6 +46,6 @@ jobs:
         uses: peter-evans/repository-dispatch@v1
         with:
            token: ${{ secrets.PAT }}
-           repository: ${{ github.actor }}/argocd-node-app-config
+           repository: https://github.com/hemanthravishankar/ci_cd_project_k8s.git
            event-type: new-image
            client-payload: 'docker.io/hemanthravishankar/notepad:${{ github.sha }}'
