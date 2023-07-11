@@ -48,4 +48,4 @@ jobs:
            token: ${{ secrets.PAT }}
            repository: hemanthravishankar/ci_cd_project_k8s
            event-type: new-image
-           client-payload: '{"github": ${{ github.sha }}}'
+           client-payload: '{"ref": "${{ github.ref }}", "sha": "${{ github.sha }}", "test": "test message"}'
